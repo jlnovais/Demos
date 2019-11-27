@@ -11,3 +11,10 @@ docker run -d -v d:/Docker/logs:/logs --hostname TestDemo --name Demo01  workers
 build the image:
 
 docker build -f "d:\projectos-github\demos\workerservicedemo\workerservicedemo\dockerfile" --force-rm -t workerservicedemo:test  --label "this_is_a_test" "d:\projectos-github\demos\workerservicedemo"
+
+
+----------------------
+
+start docker-compose:
+
+docker-compose up
