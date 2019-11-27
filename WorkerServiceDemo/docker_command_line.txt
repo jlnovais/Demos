@@ -1,0 +1,13 @@
+run the containter
+
+docker run -it -v d:/Docker/logs:/logs --hostname TestDemo --name Demo01 workerservicedemo:latest
+
+or:
+
+docker run -d -v d:/Docker/logs:/logs --hostname TestDemo --name Demo01  workerservicedemo:latest
+
+-----------------------
+
+build the image:
+
+docker build -f "d:\projectos-github\demos\workerservicedemo\workerservicedemo\dockerfile" --force-rm -t workerservicedemo:test  --label "this_is_a_test" "d:\projectos-github\demos\workerservicedemo"

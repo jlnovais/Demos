@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.7.18-management-alpine
+    container_name: rabbitmq
+    volumes:
+            #- ./.docker/rabbitmq/etc/:/etc/rabbitmq/
+            #- ./.docker/rabbitmq/data/:/var/lib/rabbitmq/
+            - d:/Docker/rabbitmq/logs/:/var/log/rabbitmq/
+    environment:
+            #RABBITMQ_ERLANG_COOKIE: ${RABBITMQ_ERLANG_COOKIE}
+            RABBITMQ_DEFAULT_USER: test
+            RABBITMQ_DEFAULT_PASS: 123
+    ports:
+            - 5672:5672
+            - 8080:15672
+            - 25676:25676
+  workerservicedemo:
+    image: ${DOCKER_REGISTRY-}workerservicedemo
+    build:
+      context: .
+      dockerfile: WorkerServiceDemo/Dockerfile
+    
