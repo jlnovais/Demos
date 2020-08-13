@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JN.ApiDemo.AdminAPI</name>
+    </assembly>
+    <members>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UserKeysController.RegisterUserKey(System.String,JN.ApiDemo.Contracts.V1.Admin.Requests.UserApiKeyRequest)">
+            <summary>
+            Create a new key for the given user
+            </summary>
+            <param name="userId">User Id for the new key</param>
+            <param name="request">Key details - leaves 'key' property empty to create automatically</param>
+            <returns></returns>
+            <response code="201">Key created successfully</response>
+            <response code="400">Invalid request</response>
+            <response code="404">Specified user Id not found</response>
+            <response code="422">Validation errors</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UserKeysController.GetUserKey(System.String,System.String)">
+            <summary>
+            Get a key for the user
+            </summary>
+            <param name="userId">user Id</param>
+            <param name="apiKey">key to find</param>
+            <returns></returns>
+            <response code="200">Key was found</response>
+            <response code="404">Specified user Id or key not found</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UserKeysController.GetUserKeys(System.String,JN.ApiDemo.Utils.Parameters.PaginationAndSortingParameters)">
+            <summary>
+            Get a list of user keys.
+            </summary>
+            <param name="userId">user Id</param>
+            <param name="parameters">Search parameters</param>
+            <returns></returns>
+            <response code="200">Operation completed successful</response>
+            <response code="400">Invalid request</response>
+            <response code="404">Specified user Id not found</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UserKeysController.DeleteUserKey(System.String,System.String)">
+            <summary>
+            Delete a key for the given user.
+            </summary>
+            <param name="userId">User Id</param>
+            <param name="apiKey">Key to delete</param>
+            <returns></returns>
+            <response code="204">Operation completed successful</response>
+            <response code="404">Specified user Id or key not found</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UserKeysController.UpdateKeyPartial(System.String,System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{JN.ApiDemo.Contracts.V1.Admin.Requests.UserApiKeyUpdateRequest})">
+            <summary>
+            Update an user key - partial update. Must use 'application/json-patch+json' content type in request header an the body must be a json patch document.
+            </summary>
+            <param name="userId">user Id</param>
+            <param name="apiKey">key to update</param>
+            <param name="patchDocument">document with changes</param>
+            <response code="204">Operation completed successfully</response>
+            <response code="400">Invalid request</response>
+            <response code="404">Specified user Id ok key not found</response>
+            <response code="422">Validation errors</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UsersController.GetOptions">
+            <summary>
+            List methods available for this resource.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UsersController.GetUsers(JN.ApiDemo.Identity.Parameters.UsersParameters)">
+            <summary>
+            Get list of users. A custom accept header can be used for returning a short version of user details.
+            </summary>
+            <param name="parameters"></param>
+            <returns>Returns list of 'UserDetailsResponse' or 'UserDetailsShortResponse' objects (according to the accept header used on request) </returns>
+            <remarks>
+            Sample Response:
+            
+                [
+                    {
+                        "id": 1,
+                        "username": "user",
+                        "email": "email@email.email",
+                        "phoneNumber": "123456789",
+                        "notificationEmail": "email@email.email",
+                        "firstName": "Jose",
+                        "lastName": "Test",
+                        "active": true,
+                        "description": "this a test user",
+                        "dateCreated": "2020-07-08T19:57:23.5669785",
+                        "roles": "Admin"
+                    }
+                ]
+            
+            Sample Response (short):
+            
+                [
+                    {
+                        "id": 1,
+                        "username": "user",
+                        "email": "email@email.email",
+                        "name": "Jose Test",
+                        "active": true,
+                        "description": "this a test user"
+                    }
+                ]
+            
+            
+            </remarks>
+            <response code="200">Returns the list of users</response>
+            <response code="400">Invalid request - parameters are not valid</response>
+            <response code="404">Specified Id not found</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UsersController.GetUser(System.String)">
+             <summary>
+             Get user details for one user. A custom accept header can be used for returning a short version of user details.
+             </summary>
+             <param name="userId">user Id to get details</param>
+             <returns>Returns 'UserDetailsResponse' or 'UserDetailsShortResponse' object (according to the accept header used on request) </returns>
+            <remarks>
+             Sample Response:
+             
+                 {
+                     "id": 1,
+                     "username": "user",
+                     "email": "email@email.email",
+                     "phoneNumber": "123456789",
+                     "notificationEmail": "email@email.email",
+                     "firstName": "Jose",
+                     "lastName": "Test",
+                     "active": true,
+                     "description": "this a test user",
+                     "dateCreated": "2020-07-08T19:57:23.5669785",
+                     "roles": "Admin"
+                 }
+            
+             Sample Response (short):
+            
+                 {
+                     "id": 1,
+                     "username": "user",
+                     "email": "email@email.email",
+                     "name": "Jose Test",
+                     "active": true,
+                     "description": "this a test user"
+                 }
+             
+             
+             </remarks>
+             <response code="200">Returns the user details</response>
+             <response code="404">Specified Id not found</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UsersController.RegisterUser(JN.ApiDemo.Contracts.V1.Admin.Requests.UserRequestCreate)">
+            <summary>
+            Create a new user.
+            </summary>
+            <param name="request">Details to create new user</param>
+            <returns>A newly created user</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="422">Validation problems</response>
+            <response code="400">Invalid request</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UsersController.DeleteUser(System.String)">
+            <summary>
+            Delete an existing user.
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+            <response code="204">The user has been removed, as well all API keys for that account.</response>
+            <response code="404">User not found.</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UsersController.UpdateUser(System.String,JN.ApiDemo.Contracts.V1.Admin.Requests.UserRequestUpdate)">
+            <summary>
+            Update an user - full update.
+            </summary>
+            <param name="userId">User Id to update</param>
+            <param name="request">User details to update</param>
+            <returns></returns>
+            <response code="204">User details updated.</response>
+            <response code="404">User not found.</response>
+            <response code="400">Invalid request.</response>
+        </member>
+        <member name="M:JN.ApiDemo.AdminAPI.Controllers.V1.UsersController.UpdateUserPartial(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{JN.ApiDemo.Contracts.V1.Admin.Requests.UserRequestUpdate})">
+            <summary>
+            Update an user - partial update. Must use 'application/json-patch+json' content type in request header an the body must be a json patch document.
+            </summary>
+            <param name="userId">User Id to update</param>
+            <param name="patchDocument">Document with patch instructions</param>
+            <returns></returns>
+            <response code="204">User details updated.</response>
+            <response code="404">User not found.</response>
+            <response code="422">Validation problems</response>
+            <response code="400">Invalid request.</response>
+        </member>
+        <member name="T:JN.ApiDemo.AdminAPI.Helpers.ProducesCustomAttribute">
+             <summary>
+             Media type application/problem+json lost in combination with ProducesAttribute.
+             In this way, a custom 'Produces' is needed to avoid that problem.
+            
+             also:
+             
+             In Start class / ConfigureServices method / services.AddControllers
+             
+             ReturnHttpNotAcceptable should be kept to false (Default value) for this to work but this does not show the HTTP 406 Not Acceptable code when
+             the Accept header in the request contains an unknown media type
+             
+             </summary>
+        </member>
+    </members>
+</doc>

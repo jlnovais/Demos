@@ -1,0 +1,40 @@
+﻿td.col_header.response-col_status {
+    color: brown !important;
+}
+
+td.col_header.response-col_description {
+    color: brown !important;
+    font-size: 14px;
+}
+
+th.col_header.parameters-col_description {
+    color: brown !important;
+    font-size: 14px;
+}
+
+th.col_header.parameters-col_name {
+    color: brown !important;
+    font-size: 14px;
+}
+
+td.col_header.response-col_links {
+    color: brown !important;
+    font-size: 14px;
+}
+
+td.response-col_status {
+    color: blue !important;
+}
+
+
+div.response-col_description__inner {
+    border-radius: 5px;
+    background: #a9a9a9;
+
+    font-size: 14px;
+
+    padding-top: 1px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-bottom: 1px !important;
+}

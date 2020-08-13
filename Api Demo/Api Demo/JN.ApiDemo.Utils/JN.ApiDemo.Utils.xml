@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JN.ApiDemo.Utils</name>
+    </assembly>
+    <members>
+        <member name="T:JN.ApiDemo.Utils.Parameters.PaginationAndSortingParameters">
+            <summary>
+            Pagination and sorting parameters
+            </summary>
+        </member>
+        <member name="P:JN.ApiDemo.Utils.Parameters.PaginationAndSortingParameters.Page">
+            <summary>
+            page to return
+            </summary>
+        </member>
+        <member name="P:JN.ApiDemo.Utils.Parameters.PaginationAndSortingParameters.PageSize">
+            <summary>
+            number of items per page
+            </summary>
+        </member>
+        <member name="P:JN.ApiDemo.Utils.Parameters.PaginationAndSortingParameters.OrderBy">
+            <summary>
+            field name used to order the results
+            </summary>
+        </member>
+        <member name="P:JN.ApiDemo.Utils.Parameters.PaginationAndSortingParameters.Direction">
+            <summary>
+            sort direction - asc or desc
+            </summary>
+        </member>
+    </members>
+</doc>

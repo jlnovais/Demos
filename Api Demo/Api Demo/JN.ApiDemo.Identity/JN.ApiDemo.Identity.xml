@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JN.ApiDemo.Identity</name>
+    </assembly>
+    <members>
+        <member name="M:JN.ApiDemo.Identity.Helpers.IdentityServiceHelpers.ResetLockout(Microsoft.AspNetCore.Identity.UserManager{JN.ApiDemo.Identity.Domain.ApplicationUser},JN.ApiDemo.Identity.Domain.ApplicationUser)">
+            <summary>
+            Used to reset a user's lockout count.
+            Based on https://github.com/dotnet/aspnetcore/blob/v2.2.2/src/Identity/Core/src/SignInManager.cs
+            </summary>
+            <param name="userManager"></param>
+            <param name="user">The user</param>
+            <returns>The <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation, containing the <see cref="T:Microsoft.AspNetCore.Identity.IdentityResult"/> of the operation.</returns>
+        </member>
+        <member name="M:JN.ApiDemo.Identity.Services.IdentityService.GetUserByUsername(System.String,System.String,System.Boolean)">
+            <summary>
+            Validate user by username and password
+            </summary>
+            <param name="username">username</param>
+            <param name="password">password</param>
+            <param name="lockoutOnFailure">to disable the lockout feature, use false</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

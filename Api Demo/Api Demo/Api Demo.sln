@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JN.ApiDemo.Contracts", "JN.ApiDemo.Contracts\JN.ApiDemo.Contracts.csproj", "{7C76B322-079C-4C59-9C0D-B1C59EAFB081}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JN.ApiDemo.AdminAPI", "JN.ApiDemo.AdminAPI\JN.ApiDemo.AdminAPI.csproj", "{4D11EA92-EAF7-442A-998F-A3B997352C0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JN.ApiDemo.Identity", "JN.ApiDemo.Identity\JN.ApiDemo.Identity.csproj", "{6D5F7003-DFDE-4F28-B135-F1BE6D04B77A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{EF1FFBDC-7DB9-4F67-B72D-6F57D4464676}"
+	ProjectSection(SolutionItems) = preProject
+		..\Docs\jsonPatch_readme.txt = ..\Docs\jsonPatch_readme.txt
+		problemas com mediaType application_problem+json.txt = problemas com mediaType application_problem+json.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JN.ApiDemo.Utils", "JN.ApiDemo.Utils\JN.ApiDemo.Utils.csproj", "{BE55E509-1A67-4E38-A336-CE3C7F7BDE1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JN.ApiDemo.UpdateDB", "JN.ApiDemo.UpdateDB\JN.ApiDemo.UpdateDB.csproj", "{5C0622F4-10CE-4415-8074-334CA797E097}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C76B322-079C-4C59-9C0D-B1C59EAFB081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C76B322-079C-4C59-9C0D-B1C59EAFB081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C76B322-079C-4C59-9C0D-B1C59EAFB081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C76B322-079C-4C59-9C0D-B1C59EAFB081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D11EA92-EAF7-442A-998F-A3B997352C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D11EA92-EAF7-442A-998F-A3B997352C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D11EA92-EAF7-442A-998F-A3B997352C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D11EA92-EAF7-442A-998F-A3B997352C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D5F7003-DFDE-4F28-B135-F1BE6D04B77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D5F7003-DFDE-4F28-B135-F1BE6D04B77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D5F7003-DFDE-4F28-B135-F1BE6D04B77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D5F7003-DFDE-4F28-B135-F1BE6D04B77A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE55E509-1A67-4E38-A336-CE3C7F7BDE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE55E509-1A67-4E38-A336-CE3C7F7BDE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE55E509-1A67-4E38-A336-CE3C7F7BDE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE55E509-1A67-4E38-A336-CE3C7F7BDE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0622F4-10CE-4415-8074-334CA797E097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0622F4-10CE-4415-8074-334CA797E097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0622F4-10CE-4415-8074-334CA797E097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0622F4-10CE-4415-8074-334CA797E097}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {208273E1-BA11-4353-A318-A7F82F0C183E}
+	EndGlobalSection
+EndGlobal

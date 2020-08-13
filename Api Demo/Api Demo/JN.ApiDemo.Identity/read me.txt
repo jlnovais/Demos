@@ -1,0 +1,28 @@
+﻿*** criar migrations
+
+1) definir o projecto como detault na solução
+
+2) na consola "Package manager", seleccionando o projecto em questão:
+
+
+PM> Add-Migration [nome da migração] -OutputDir [path]
+
+exemplo:
+
+PM> Add-Migration InitialCreate -OutputDir "Data/Migrations"
+
+criar migração na pasta Data\Migrations
+-OutputDir é opcional
+
+*** remover migrations
+
+na consola "Package manager", seleccionando o projecto em questão:
+
+PM> Remove-Migration
+
+isto remove a migraçao acabada de criar
+
+
+*** actualizar a BD com a ultima migração criada
+
+PM> Update-Database

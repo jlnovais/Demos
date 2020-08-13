@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JN.ApiDemo.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:JN.ApiDemo.Contracts.V1.Admin.Requests.UserApiKeyRequest">
+            <summary>
+            Request for a new key 
+            </summary>
+        </member>
+        <member name="P:JN.ApiDemo.Contracts.V1.Admin.Requests.UserApiKeyRequest.Key">
+            <summary>
+            Key to create - leave empty to create automatically
+            </summary>
+        </member>
+        <member name="P:JN.ApiDemo.Contracts.V1.Admin.Requests.UserApiKeyRequest.Active">
+            <summary>
+            Activate the key (ready for use)
+            </summary>
+        </member>
+        <member name="T:JN.ApiDemo.Contracts.V1.Admin.Requests.UserApiKeyUpdateRequest">
+            <summary>
+            Key update request
+            </summary>
+        </member>
+        <member name="P:JN.ApiDemo.Contracts.V1.Admin.Requests.UserApiKeyUpdateRequest.Active">
+            <summary>
+            Key is active
+            </summary>
+        </member>
+        <member name="T:JN.ApiDemo.Contracts.V1.Admin.Requests.UserRequestCreate">
+            <summary>
+            Details for creating a new user
+            </summary>
+        </member>
+        <member name="T:JN.ApiDemo.Contracts.V1.Admin.Requests.UserRequestUpdate">
+            <summary>
+            Details for updating a new user
+            </summary>
+        </member>
+        <member name="T:JN.ApiDemo.Contracts.V1.Admin.Responses.UserDetailsResponse">
+            <summary>
+            
+            </summary>
+            <example>
+            {
+               "id": 1,
+               "username": "user",
+               "email": "email@email.email",
+               "phoneNumber": "123456789",
+               "notificationEmail": "email@email.email",
+               "firstName": "Jose",
+               "lastName": "Test",
+               "active": true,
+               "description": "this a test user",
+               "dateCreated": "2020-07-08T19:57:23.5669785",
+               "roles": "Admin"
+            }
+            </example>
+        </member>
+    </members>
+</doc>

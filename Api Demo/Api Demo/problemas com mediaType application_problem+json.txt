@@ -1,0 +1,14 @@
+parece que há problemas com o mediaType application/problem+json quando se devolve um objecto ProblemDetails no controller
+
+O content-type da resposta não fica como "application/problem+json" ou então dá erro 
+
+No output formatter was found for content types 'application/problem+json' to write the response.
+
+e neste caso status code é 406 e não o que se pretende (422, 404, etc)
+
+Para já criou-se um ProducesCustomAttribute para aplicar aos controlos e desligou-se a opção ReturnHttpNotAcceptable em services.AddControllers(...) na configuração dos serviços
+
+https://github.com/dotnet/aspnetcore/issues/18891
+https://github.com/dotnet/aspnetcore/issues/19510
+
+https://github.com/dotnet/aspnetcore/issues?q=is%3Aissue+is%3Aopen+%22application%2Fproblem%2Bjson%22
